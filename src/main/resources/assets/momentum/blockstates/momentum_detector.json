@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": {"model": "momentum:block/momentum_detector"}
+  }
+}

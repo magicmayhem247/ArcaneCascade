@@ -1,0 +1,10 @@
+{
+  "itemGroup.momentumtab": "Momentum",
+
+  "item.momentum.inert_crystal": "Inert Crystal",
+  "item.momentum.charged_crystal": "Charged Crystal",
+  "item.momentum.potential_crystal": "Potential Crystal",
+  "item.momentum.kinetic_crystal": "Kinetic Crystal",
+
+  "block.momentum.momentum_detector": "Momentum Detector"
+}

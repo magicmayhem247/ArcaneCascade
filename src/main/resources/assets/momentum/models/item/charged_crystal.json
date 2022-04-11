@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "arcade:item/charged_crystal"
+    "layer0": "momentum:item/charged_crystal"
   }
 }

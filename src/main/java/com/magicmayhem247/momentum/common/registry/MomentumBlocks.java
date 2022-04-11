@@ -1,6 +1,6 @@
-package com.magicmayhem247.arcanecascade.common.registry;
+package com.magicmayhem247.momentum.common.registry;
 
-import com.magicmayhem247.arcanecascade.ArcaneCascade;
+import com.magicmayhem247.momentum.Momentum;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -14,16 +14,22 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
-public class ArcaneBlocks
+public class MomentumBlocks
 {
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ArcaneCascade.MOD_ID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Momentum.MOD_ID);
 
     //Debug Blocks
-    public static final RegistryObject<Block> ARCANE_DETECTOR = registerBlock("arcane_detector",
+    public static final RegistryObject<Block> MOMENTUM_DETECTOR = registerBlock("momentum_detector",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(5f)
                     .requiresCorrectToolForDrops()),
-            CreativeModeTab.TAB_MISC);
+            MomentumCreativeModeTab.MOMENTUM_TAB);
+
+    //Momentum Transfers
+
+    //Momentum Sources
+
+    //Momentum Sinks
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab)
     {
@@ -34,7 +40,7 @@ public class ArcaneBlocks
 
     private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab)
     {
-        return ArcaneItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+        return MomentumItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
     }
 
     public static void register(IEventBus eventBus)
